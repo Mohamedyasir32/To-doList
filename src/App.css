@@ -302,18 +302,26 @@ background-color: #822fcf;
 }
 
 /* --- MOBILE --- */
-/* @media (max-width: 900px) {
+@media (max-width: 500px) {
+    body {
+    padding: 10px 0;
+    background-size: cover;
+    background-attachment: scroll; 
+  }
   .container {
     width: 95%;
     height: auto;
     padding: 20px;
+    margin: 10px auto;
+    border-radius: 20px;
+    gap: 15px;
   }
   .list-section {
     width: 100%;
     max-width: 500px;
     max-height: 320px;
   }
-} */
+}
 /* --- IMPROVED MOBILE VIEW --- */
 @media (max-width: 900px) {
   body {
@@ -418,8 +426,8 @@ background-color: #822fcf;
     font-size: 13px;
   }
 }
-
-/* --- VERY SMALL DEVICES (Below 500px) --- */
+/* 
+--- VERY SMALL DEVICES (Below 500px) ---
 @media (max-width: 500px) {
   .container {
     padding: 12px;
@@ -436,4 +444,4 @@ background-color: #822fcf;
   .input-section button {
     width: 80%;
   }
-}
+} */
