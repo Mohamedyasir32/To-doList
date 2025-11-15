@@ -322,12 +322,14 @@ background-color: #822fcf;
     display: flex;
     gap: 15px;
     justify-content: center;
+    scroll-behavior: smooth;
   }
   .list-section {
     width: 100%;
     max-width: 500px;
     max-height: 320px;
     scroll-behavior: smooth;
+    
   }
 }
 /* --- IMPROVED MOBILE VIEW --- */
