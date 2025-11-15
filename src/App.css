@@ -323,7 +323,7 @@ background-color: #822fcf;
     width: 100%;
     max-width: 500px;
     max-height: 320px;
-    scrollbar-width: none;
+    scroll-behavior: smooth;
   }
 }
 /* --- IMPROVED MOBILE VIEW --- */
