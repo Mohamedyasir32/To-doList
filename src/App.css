@@ -306,7 +306,9 @@ background-color: #822fcf;
     body {
     padding: 10px 0;
     background-size: cover;
-    background-attachment: scroll; 
+    display: flex;
+  justify-content: center;
+  overflow: hidden;
   }
   .container {
     width: 95%;
@@ -315,11 +317,13 @@ background-color: #822fcf;
     margin: 10px auto;
     border-radius: 20px;
     gap: 15px;
+    justify-content: center;
   }
   .list-section {
     width: 100%;
     max-width: 500px;
     max-height: 320px;
+    scrollbar-width: none;
   }
 }
 /* --- IMPROVED MOBILE VIEW --- */
