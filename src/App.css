@@ -315,11 +315,11 @@ background-color: #822fcf;
   }
 } */
 /* --- IMPROVED MOBILE VIEW --- */
-@media (max-width: 900px) {
+@media (max-width: 900px)  {
   body {
     padding: 10px 0;
     background-size: cover;
-    background-attachment: scroll; /* faster mobile performance */
+    background-attachment: scroll; 
   }
 
   .container {
@@ -421,6 +421,108 @@ background-color: #822fcf;
 
 /* --- VERY SMALL DEVICES (Below 500px) --- */
 @media (max-width: 500px) {
+    body {
+    padding: 10px 0;
+    background-size: cover;
+    background-attachment: scroll; 
+  }
+
+  .container {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 20px;
+    gap: 15px;
+  }
+
+  .input-section {
+    width: 100%;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .dropdown,
+  .input-section input[type="description"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .input-section button {
+    width: 60%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .topic-section {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .topic-header {
+    padding: 10px 14px;
+  }
+
+  .topic-header h2 {
+    font-size: 17px;
+  }
+
+  .topic-content.open {
+    padding: 10px 15px;
+  }
+
+  .list-section {
+    width: 100%;
+    padding: 12px;
+    max-height: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  .list-header h3 {
+    font-size: 16px;
+  }
+
+  .list-inp {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .list-inp input {
+    width: 100%;
+  }
+
+  .list-inp button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .todo-list li {
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  .todo-title {
+    font-size: 15px;
+  }
+
+  .todo-description {
+    font-size: 14px;
+    max-height: 150px;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .actions button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
   .container {
     padding: 12px;
   }
@@ -436,4 +538,4 @@ background-color: #822fcf;
   .input-section button {
     width: 80%;
   }
-}
+
