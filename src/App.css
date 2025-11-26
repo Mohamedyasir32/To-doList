@@ -301,40 +301,32 @@ background-color: #822fcf;
   }
 }
 
-/* --- MOBILE --- */
-/* @media (max-width: 900px) {
-  .container {
-    width: 95%;
-    height: auto;
-    padding: 20px;
-  }
-  .list-section {
-    width: 100%;
-    max-width: 500px;
-    max-height: 320px;
-  }
-} */
-/* --- IMPROVED MOBILE VIEW --- */
+/* --- UNIVERSAL MOBILE FIX (Below 900px) --- */
 @media (max-width: 900px) {
+
   body {
-    padding: 10px 0;
+    padding: 0;
+    margin: 0;
     background-size: cover;
-    background-attachment: scroll; /* faster mobile performance */
+    background-attachment: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
   }
 
   .container {
     width: 95%;
-    height: auto;
+    height: auto; 
+    max-height: none;
     padding: 15px;
     margin: 10px auto;
-    border-radius: 20px;
-    gap: 15px;
+    border-radius: 18px;
+    overflow-y: visible;  /* KEY FIX */
   }
 
   .input-section {
     width: 100%;
     gap: 12px;
-    margin-top: 10px;
   }
 
   .dropdown,
@@ -345,22 +337,12 @@ background-color: #822fcf;
   }
 
   .input-section button {
-    width: 60%;
+    width: 70%;
     font-size: 16px;
-    padding: 10px;
   }
 
   .topic-section {
     width: 100%;
-    border-radius: 12px;
-  }
-
-  .topic-header {
-    padding: 10px 14px;
-  }
-
-  .topic-header h2 {
-    font-size: 17px;
   }
 
   .topic-content.open {
@@ -370,63 +352,155 @@ background-color: #822fcf;
   .list-section {
     width: 100%;
     padding: 12px;
-    max-height: none;
-    margin-bottom: 15px;
-    border-radius: 10px;
+    max-height: none !important; /* KEY FIX */
   }
 
-  .list-header h3 {
-    font-size: 16px;
+  .todo-list {
+    max-height: none !important; /* KEY FIX */
+    overflow-y: visible;
+  }
+
+  .todo-list li {
+    margin: 8px 0;
   }
 
   .list-inp {
     flex-direction: column;
-    width: 100%;
-    gap: 8px;
-  }
-
-  .list-inp input {
-    width: 100%;
+    gap: 10px;
   }
 
   .list-inp button {
     width: 100%;
-    padding: 10px;
-    font-size: 15px;
-  }
-
-  .todo-list li {
-    padding: 10px;
-    margin: 8px 0;
-  }
-
-  .todo-title {
-    font-size: 15px;
-  }
-
-  .todo-description {
-    font-size: 14px;
-    max-height: 150px;
-  }
-
-  .actions {
-    justify-content: center;
-  }
-
-  .actions button {
-    padding: 6px 12px;
-    font-size: 13px;
   }
 }
+@media (max-width: 720px) {
 
-/* --- VERY SMALL DEVICES (Below 500px) --- */
-@media (max-width: 500px) {
+  body {
+    padding: 10px 0;
+    margin: 0;
+    background-size: cover;
+    background-attachment: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container {
+    width: 95%;
+    height: auto;
+    max-height: none;
+    padding: 18px;
+    border-radius: 20px;
+    overflow-y: visible;   /* Scroll fully works */
+  }
+
+  .input-section {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .dropdown,
+  .input-section input[type="description"] {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .input-section button {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  .list-section {
+    width: 100%;
     padding: 12px;
+    max-height: none !important;
+  }
+
+  .todo-list {
+    max-height: none !important;
+    overflow-y: visible;
+  }
+
+  .list-inp {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list-inp button {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+
+  body {
+    padding: 50px 0;
+    margin: 0;
+    background-size: cover;
+    background-attachment: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 95%;
+    height: auto;
+    max-height: none;
+    padding: 5px;
+    border-radius: 15px;
+    overflow-y: visible;   /* Scroll fully works */
+  }
+
+  .input-section {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .dropdown,
+  .input-section input[type="description"] {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .input-section button {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  .list-section {
+    width: 100%;
+    padding: 6px;
+    max-height: none !important;
+  }
+
+  .todo-list {
+    max-height: none !important;
+    overflow-y: visible;
+  }
+
+  .list-inp {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list-inp button {
+    width: 100%;
+  }
+}
+/* @media (max-width: 500px) {
+  
+
+  .container {
+    padding: 14px;
+    width: 95%;
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .topic-header h2 {
@@ -435,5 +509,14 @@ background-color: #822fcf;
 
   .input-section button {
     width: 80%;
+    font-size: 15px;
   }
-}
+
+  .todo-list li {
+    padding: 8px;
+  }
+
+  .todo-description {
+    font-size: 13px;
+  }
+} */
